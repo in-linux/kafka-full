@@ -21,7 +21,7 @@ function waitForGrafana {
 
 waitForGrafana
 
-mkdir /grafana
+#mkdir /grafana
 
 for datasource in /datasources/*json ; do
     curl -XPOST ${GRAFANA_URL}/api/datasources/ -H 'Content-Type: application/json;charset=UTF-8' --output /dev/null -d @${datasource}
